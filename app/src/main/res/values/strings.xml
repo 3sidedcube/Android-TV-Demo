@@ -1,3 +1,9 @@
 <resources>
 	<string name="app_name">AndroidTvDemo</string>
+	<string name="browse_title">Android TV Demo</string>
+	<string name="browse_list_header_first">Movies</string>
+	<string name="browse_list_header_second">TV Shows</string>
+	<string name="detail_action_first">Buy £7.99</string>
+	<string name="detail_action_second">Rent £1.99</string>
+	<string name="detail_header_first">Related Items</string>
 </resources>

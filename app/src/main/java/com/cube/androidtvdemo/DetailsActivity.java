@@ -14,12 +14,14 @@ import com.cube.model.RowItem;
  */
 public class DetailsActivity extends Activity
 {
+	public static final String PARAM_SELECTED = "selected";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_holder);
-		RowItem item = (RowItem)getIntent().getExtras().get("selected");
+		RowItem item = (RowItem)getIntent().getExtras().get(PARAM_SELECTED);
 		getFragmentManager()
 				.beginTransaction()
 				.replace(R.id.fragment_holder, MyDetailsFragment.instantiate(item))

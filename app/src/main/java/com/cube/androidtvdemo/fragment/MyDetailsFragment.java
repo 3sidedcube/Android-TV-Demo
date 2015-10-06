@@ -14,6 +14,7 @@ import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
 import android.view.View;
 
+import com.cube.androidtvdemo.R;
 import com.cube.lib.FakeDataManager;
 import com.cube.model.RowItem;
 import com.cube.presenter.DetailsPresenter;
@@ -82,8 +83,8 @@ public class MyDetailsFragment extends DetailsFragment
 
 			}
 		});
-		detailsOverview.addAction(new Action(1, "Buy £7.99"));
-		detailsOverview.addAction(new Action(2, "Rent £1.99"));
+		detailsOverview.addAction(new Action(1, getActivity().getString(R.string.detail_action_first)));
+		detailsOverview.addAction(new Action(2, getActivity().getString(R.string.detail_action_second)));
 		mRowsAdapter.add(detailsOverview);
 
 		// Add a Related items row
@@ -91,7 +92,7 @@ public class MyDetailsFragment extends DetailsFragment
 		listRowAdapter.add(FakeDataManager.getInstance().getRow1().get(0));
 		listRowAdapter.add(FakeDataManager.getInstance().getRow1().get(1));
 		listRowAdapter.add(FakeDataManager.getInstance().getRow1().get(2));
-		HeaderItem header = new HeaderItem(0, "Related Items");
+		HeaderItem header = new HeaderItem(0, getActivity().getString(R.string.detail_header_first));
 		mRowsAdapter.add(new ListRow(header, listRowAdapter));
 
 		setAdapter(mRowsAdapter);
