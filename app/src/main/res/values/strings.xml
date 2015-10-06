@@ -1,3 +1,6 @@
 <resources>
 	<string name="app_name">AndroidTvDemo</string>
+	<string name="browse_title">Android TV Demo</string>
+	<string name="browse_list_header_first">Movies</string>
+	<string name="browse_list_header_second">TV Shows</string>
 </resources>

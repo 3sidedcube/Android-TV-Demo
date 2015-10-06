@@ -33,7 +33,7 @@ public class MyBrowseFragment extends BrowseFragment implements OnItemViewClicke
 	public void onActivityCreated(Bundle savedInstanceState)
 	{
 		super.onActivityCreated(savedInstanceState);
-		setTitle("Android TV Demo");
+		setTitle(getString(R.string.browse_title));
 		// Set the main colour used by the app, similar to the 'primary' colour used by mobile apps
 		setBrandColor(getResources().getColor(R.color.primary));
 		// Set the colour of the search icon - this appears as a FAB-like icon in the top left
@@ -53,14 +53,14 @@ public class MyBrowseFragment extends BrowseFragment implements OnItemViewClicke
 		{
 			moviesRowAdapter.add(rowItem);
 		}
-		mRowsAdapter.add(new ListRow(new HeaderItem(0, "Movies"), moviesRowAdapter));
+		mRowsAdapter.add(new ListRow(new HeaderItem(0, getActivity().getString(R.string.browse_list_header_first)), moviesRowAdapter));
 		// Add row 2
 		ArrayObjectAdapter tvRowAdapter = new ArrayObjectAdapter(new ItemPresenter());
 		for (RowItem rowItem : FakeDataManager.getInstance().getRow2())
 		{
 			tvRowAdapter.add(rowItem);
 		}
-		mRowsAdapter.add(new ListRow(new HeaderItem(1, "TV Shows"), tvRowAdapter));
+		mRowsAdapter.add(new ListRow(new HeaderItem(1, getActivity().getString(R.string.browse_list_header_second)), tvRowAdapter));
 		setAdapter(mRowsAdapter);
 	}
 
