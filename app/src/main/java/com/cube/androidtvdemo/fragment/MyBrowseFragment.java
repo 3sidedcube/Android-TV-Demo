@@ -68,7 +68,7 @@ public class MyBrowseFragment extends BrowseFragment implements OnItemViewClicke
 	public void onItemClicked(Presenter.ViewHolder itemViewHolder, Object item, RowPresenter.ViewHolder rowViewHolder, Row row)
 	{
 		Intent i = new Intent(getActivity(), DetailsActivity.class);
-		i.putExtra("selected", (RowItem)item);
+		i.putExtra(DetailsActivity.PARAM_SELECTED, (RowItem)item);
 		startActivity(i);
 	}
 }
